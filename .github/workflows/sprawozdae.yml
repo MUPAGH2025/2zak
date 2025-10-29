@@ -4,4 +4,12 @@ jobs:
     polot:
         runs-on: ubuntu-22.04
         steps:
-           - run: sudo apt-get install texlive-xetex 
+           - run: sudo apt-get install texlive-xetex nbconvert inkscape
+           - run: pip install scipy 
+           - uses: actions/checkout@v4
+           - run: python -m nbconvert
+                -- to pdf --execute
+                przeplyw.ipynb
+            - uses: actions/upload-artifact@v4
+              with:
+                  path: przeplyw.pdf
