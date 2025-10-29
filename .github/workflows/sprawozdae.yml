@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-22.04
         steps:
            - run: sudo apt-get install texlive-xetex inkscape
-           - run: pip install scipy nbconvert 
+           - run: pip install scipy nbconvert ipykerner
            - uses: actions/checkout@v4
            - run: python -m nbconvert --to pdf --execute przeplyw.ipynb
            - uses: actions/upload-artifact@v4
