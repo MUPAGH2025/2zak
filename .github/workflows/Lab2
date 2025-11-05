@@ -1,7 +1,7 @@
 name: lab2
 on: push
 jobs:
-    przeplyw:
+    pdf:
         runs-on: ubuntu-22.04
         steps:
            - run: sudo apt-get install texlive-xetex inkscape
